@@ -1,0 +1,76 @@
+{
+  "name": "nodeflare",
+  "version": "1.1.0",
+  "main": "dist/nodeflare.js",
+  "module": "src/index.js",
+  "scripts": {
+    "clean": "rimraf dist",
+    "prebuild": "npm run clean",
+    "build": "webpack",
+    "test": "npm run build && mocha --compilers js:babel-core/register"
+  },
+  "keywords": [
+    "express",
+    "api",
+    "framework",
+    "expressjs",
+    "nodeflare",
+    "node",
+    "flare",
+    "di",
+    "dependency injection",
+    "event"
+  ],
+  "eslintConfig": {
+    "extends": "eslint:recommended",
+    "parserOptions": {
+      "ecmaVersion": 7,
+      "sourceType": "module"
+    },
+    "env": {
+      "node": true
+    },
+    "rules": {
+      "no-console": 0,
+      "no-unused-vars": 1
+    }
+  },
+  "dependencies": {
+    "ctjs-di": "^1.0.0",
+    "ctjs-event": "^1.0.1",
+    "ctjs-util": "^1.0.0",
+    "mysql": "^2.13.0",
+    "pg": "^6.1.0",
+    "pug": "^2.0.0-beta11",
+    "sequelize": "^3.24.3",
+    "sqlite3": "^3.1.8"
+  },
+  "devDependencies": {
+    "atob": "^2.0.3",
+    "babel-polyfill": "^6.16.0",
+    "bluebird": "^3.4.7",
+    "body-parser": "~1.15.1",
+    "compression": "^1.6.2",
+    "cors": "^2.8.1",
+    "crypto": "0.0.3",
+    "express": "^4.14.1",
+    "form-data": "^2.1.2",
+    "isomorphic-fetch": "^2.2.1",
+    "njwt": "^0.3.1",
+    "pg-hstore": "^2.3.2",
+    "secure-random": "^1.1.1",
+    "uuid": "^3.0.1",
+    "babel-cli": "^6.16.0",
+    "babel-core": "^6.16.0",
+    "babel-loader": "^6.3.2",
+    "babel-preset-es2015": "^6.16.0",
+    "babel-preset-es2015-webpack": "^6.4.3",
+    "babel-preset-stage-0": "^6.16.0",
+    "copy": "^0.3.0",
+    "copyfiles": "^1.0.0",
+    "eslint": "^3.6.1",
+    "mocha": "^3.1.2",
+    "rimraf": "^2.5.4",
+    "webpack": "^2.2.1"
+  }
+}
